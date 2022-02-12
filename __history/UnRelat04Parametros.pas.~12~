@@ -1,0 +1,88 @@
+unit UnRelat04Parametros;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, UnConexao, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
+  FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
+  Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, RLReport, Vcl.StdCtrls,
+  Vcl.DBCtrls, Vcl.Imaging.pngimage, Vcl.ExtCtrls;
+
+type
+  TFormRelat04Parametros = class(TForm)
+    cbCliente: TDBComboBox;
+    RLLabel1: TRLLabel;
+    DsCliente: TDataSource;
+    qryCliente: TFDQuery;
+    RLLabel2: TRLLabel;
+    RLLabel3: TRLLabel;
+    Button1: TButton;
+    Image1: TImage;
+    cbLista: TComboBox;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormRelat04Parametros: TFormRelat04Parametros;
+
+implementation
+
+uses
+  unRelat04;
+
+{$R *.dfm}
+
+procedure TFormRelat04Parametros.Button1Click(Sender: TObject);
+var
+select: string;
+begin
+  FormRelat04 := TFormRelat04.Create(Nil);
+
+  FormRelat04.qryVenda.Close;
+
+   select := 'select * from venda v, cliente c, vendaitem vi, produto p ' +
+             'where c.codcliente = v.id_cliente ' +
+             'and vi.id_vendaitem = v.id_venda ' +
+             'and p.codproduto = vi.id_produto ';
+
+   if cbCliente.text = '' then
+    showMessage('Selecione um cliente!');
+
+
+  if (cbCliente.itemindex <> 0) then
+  begin
+    select := select + ' and c.nome = ' +QuotedStr(cbCliente.Text);
+  end;
+  if (cbLista.ItemIndex = 0) then
+  begin
+    select := select + ' order by c.nome ';
+  end
+  else
+  begin
+     select := select + ' order by c.codcliente ';
+  end;
+
+  FormRelat04:= TFormRelat04.create(nil);
+
+  formRelat04.QryVenda.close;
+
+  formRelat04.QryVenda.SQL.Text := SELECT;
+
+  formRelat04.QryVenda.Open;
+
+  IF  formRelat04.QryVenda.RecordCount = 0 Then
+    ShowMessage('Não existem vendas para o cliente selecionado')
+  Else
+    formRelat04.RLReport1.Preview;
+
+  formRelat04.Free;
+
+end;
+
+end.

@@ -1,0 +1,80 @@
+object FormRelat03Parametros: TFormRelat03Parametros
+  Left = 0
+  Top = 0
+  Caption = 'Relat'#243'rio de vendas por UF'
+  ClientHeight = 236
+  ClientWidth = 472
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 24
+    Top = 47
+    Width = 331
+    Height = 23
+    Caption = 'SELECIONE O ESTADO DESEJADO:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+  end
+  object cbEstado: TComboBox
+    Left = 88
+    Top = 89
+    Width = 267
+    Height = 21
+    TabOrder = 0
+    Items.Strings = (
+      'Todos'
+      'AC'
+      'AL'
+      'AP'
+      'AM'
+      'BA'
+      'CE'
+      'DF'
+      'ES'
+      'GO'
+      'MA'
+      'MT'
+      'MS'
+      'MG'
+      'PA'
+      'PB'
+      'PR'
+      'PE'
+      'PI'
+      'RJ'
+      'RN'
+      'RS'
+      'RO'
+      'RR'
+      'SC'
+      'SP'
+      'SE'
+      'TO')
+  end
+  object Button1: TButton
+    Left = 272
+    Top = 128
+    Width = 129
+    Height = 41
+    Caption = 'IMPRIMIR'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+    TabOrder = 1
+    OnClick = Button1Click
+  end
+end

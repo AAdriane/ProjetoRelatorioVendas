@@ -1,0 +1,40 @@
+unit UnRelat04Parametros;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, UnConexao, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
+  FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
+  Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, RLReport, Vcl.StdCtrls,
+  Vcl.DBCtrls, Vcl.Imaging.pngimage, Vcl.ExtCtrls;
+
+type
+  TFormRelat04Parametros = class(TForm)
+    DBComboBox1: TDBComboBox;
+    RLLabel1: TRLLabel;
+    DsCliente: TDataSource;
+    qryCliente: TFDQuery;
+    RLLabel2: TRLLabel;
+    RLLabel3: TRLLabel;
+    Button1: TButton;
+    Image1: TImage;
+    ComboBox1: TComboBox;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormRelat04Parametros: TFormRelat04Parametros;
+
+implementation
+
+uses
+  unRelat04;
+
+{$R *.dfm}
+
+end.

@@ -1,0 +1,70 @@
+unit UnRelat03Parametros;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, UnConexao,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
+  FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
+  FireDAC.Stan.Async, FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client;
+
+type
+  TFormRelat03Parametros = class(TForm)
+    cbEstado: TComboBox;
+    Label1: TLabel;
+    Button1: TButton;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormRelat03Parametros: TFormRelat03Parametros;
+
+
+implementation
+
+  uses
+  UnRelat03;
+
+{$R *.dfm}
+
+procedure TFormRelat03Parametros.Button1Click(Sender: TObject);
+var
+select: string;
+begin
+  select := 'select * from venda' +
+           'join cliente on cliente.codcliente = venda.id_cliente'+
+           'join municipio on municipio.id_municipio = cliente.id_municipio'+
+           'order by municipio.uf' ;
+
+  FormRelat03 := TFormRelat03.Create(Nil);
+
+  formRelat03.QryVenda.Close;
+
+  if cbEstado.itemindex <> 0  then
+     FormRelat03.qryVenda.SQL.Text := 'SELECT * FROM venda ' +
+      'JOIN cliente ON ( ' + 'CLIENTE.id_venda = venda.id_venda) ' +
+      'JOIN MUNICIPIO ON MUNICIPIO.ID_MUNICIPIO = CLIENTE.ID_MUNICIPIO'+
+      'WHERE MUNICIPIO.UF =  ' + QuotedStr(cbEstado.Text) +
+      'ORDER BY MUNICIPIO.UF '
+  ELSE
+   FormRelat03.qryVenda.SQL.Text := SELECT;
+
+   formRelat03.QryVenda.Open;
+
+  IF FormRelat03.qryVenda.RecordCount = 0 Then
+    ShowMessage('Não existem vendas na UF selecionada')
+  Else
+    FormRelat03.RLReport1.Preview;
+
+  FormRelat03.Free;
+
+
+end;
+
+end.

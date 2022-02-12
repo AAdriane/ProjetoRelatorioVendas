@@ -1,0 +1,21 @@
+program projRelatorios;
+
+uses
+  Vcl.Forms,
+  UnPrincipal in 'UnPrincipal.pas' {FormPrincipal},
+  UnConexao in 'UnConexao.pas' {DmConexao: TDataModule},
+  UnRelat01 in 'UnRelat01.pas' {FormRelat01},
+  UnRelat01Parametros in 'UnRelat01Parametros.pas' {FormRelat01Parametros},
+  UnRelat02 in 'UnRelat02.pas' {Form1},
+  UnRelat03 in 'UnRelat03.pas' {Form2},
+  UnRelat04 in 'UnRelat04.pas' {Form3};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TDmConexao, DmConexao);
+  Application.CreateForm(TFormPrincipal, FormPrincipal);
+  Application.Run;
+end.

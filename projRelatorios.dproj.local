@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/10/19 19:18:55.000.289,=D:\Horus 2021\Unit1.pas</Transaction>
+    <Transaction>2021/10/19 19:19:42.000.032,D:\Horus 2021\Linguagem de Programação II\Aula 10\projExemplo\UnPrincipal.pas=D:\Horus 2021\Unit1.pas</Transaction>
+    <Transaction>2021/10/19 19:19:42.000.032,D:\Horus 2021\Linguagem de Programação II\Aula 10\projExemplo\UnPrincipal.dfm=D:\Horus 2021\Unit1.dfm</Transaction>
+    <Transaction>2021/10/19 19:19:49.000.253,D:\Horus 2021\Linguagem de Programação II\Aula 10\projExemplo\projRelatorios.dproj=D:\Horus 2021\Project1.dproj</Transaction>
+    <Transaction>2021/10/19 19:23:00.000.137,=D:\Horus 2021\Linguagem de Programação II\Aula 10\projExemplo\Unit1.pas</Transaction>
+    <Transaction>2021/10/19 19:23:31.000.776,D:\Horus 2021\Linguagem de Programação II\Aula 10\projExemplo\UnConexao.dfm=D:\Horus 2021\Linguagem de Programação II\Aula 10\projExemplo\Unit1.dfm</Transaction>
+    <Transaction>2021/10/19 19:23:31.000.776,D:\Horus 2021\Linguagem de Programação II\Aula 10\projExemplo\UnConexao.pas=D:\Horus 2021\Linguagem de Programação II\Aula 10\projExemplo\Unit1.pas</Transaction>
+    <Transaction>2021/10/19 21:13:37.000.672,=D:\Horus 2021\Linguagem de Programação II\Aula 10\projExemplo\Unit1.pas</Transaction>
+    <Transaction>2021/10/19 21:13:52.000.884,=D:\Horus 2021\Linguagem de Programação II\Aula 10\projExemplo\UnRelat01.pas</Transaction>
+    <Transaction>2021/10/26 19:23:54.000.541,=D:\Horus 2021\Linguagem de Programação II\Aula 10\projExemplo\Unit2.pas</Transaction>
+    <Transaction>2021/10/26 19:24:10.000.556,D:\Horus 2021\Linguagem de Programação II\Aula 10\projExemplo\UnRelat01Parametros.dfm=D:\Horus 2021\Linguagem de Programação II\Aula 10\projExemplo\Unit2.dfm</Transaction>
+    <Transaction>2021/10/26 19:24:10.000.556,D:\Horus 2021\Linguagem de Programação II\Aula 10\projExemplo\UnRelat01Parametros.pas=D:\Horus 2021\Linguagem de Programação II\Aula 10\projExemplo\Unit2.pas</Transaction>
+    <Transaction>2021/10/26 21:27:14.000.322,=C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\Unit1.pas</Transaction>
+    <Transaction>2021/10/26 21:27:35.000.970,C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\Unit1.dfm=C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\UnRelat02.dfm</Transaction>
+    <Transaction>2021/10/26 21:27:35.000.970,C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\Unit1.pas=C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\UnRelat02.pas</Transaction>
+    <Transaction>2021/10/27 20:03:20.000.317,=C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\Unit2.pas</Transaction>
+    <Transaction>2021/10/27 20:03:34.000.314,C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\UnRelat03.pas=C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\Unit2.pas</Transaction>
+    <Transaction>2021/10/27 20:03:34.000.314,C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\UnRelat03.dfm=C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\Unit2.dfm</Transaction>
+    <Transaction>2021/10/27 20:41:05.000.866,=C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\Unit3.pas</Transaction>
+    <Transaction>2021/10/27 20:41:15.000.368,C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\UnRelat04.pas=C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\Unit3.pas</Transaction>
+    <Transaction>2021/10/27 20:41:15.000.368,C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\UnRelat04.dfm=C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\Unit3.dfm</Transaction>
+    <Transaction>2021/10/30 13:07:55.000.539,=C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\Unit4.pas</Transaction>
+    <Transaction>2021/10/30 13:22:44.000.035,C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\Unit4.pas=C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\UnRelat03Parametros.pas</Transaction>
+    <Transaction>2021/10/30 13:22:44.000.035,C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\Unit4.dfm=C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\UnRelat03Parametros.dfm</Transaction>
+    <Transaction>2021/10/30 14:40:38.000.569,=C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\Unit2.pas</Transaction>
+    <Transaction>2021/10/30 14:40:56.000.925,C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\Unit2.pas=C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\UnRelat04Parametros.pas</Transaction>
+    <Transaction>2021/10/30 14:40:56.000.925,C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\Unit2.dfm=C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\UnRelat04Parametros.dfm</Transaction>
+    <Transaction>2021/10/30 16:56:19.000.450,=C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\Unit2.pas</Transaction>
+    <Transaction>2021/10/30 16:59:09.000.388,C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\UnRelat02parametros.pas=C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\Unit2.pas</Transaction>
+    <Transaction>2021/10/30 16:59:09.000.388,C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\UnRelat02parametros.dfm=C:\Users\diego\Desktop\Horus2021\4 SEMESTRE\LINGUAGEM DE PROGRAMAÇÃO II\projExemplo\Unit2.dfm</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="UnConexao.pas"/>
+    <File Path="UnConexao.dfm"/>
+    <File Path="UnPrincipal.pas"/>
+    <File Path="UnPrincipal.dfm"/>
+    <File Path="UnRelat01.pas"/>
+    <File Path="UnRelat01.dfm"/>
+    <File Path="UnRelat01Parametros.pas"/>
+    <File Path="UnRelat01Parametros.dfm"/>
+    <File Path="UnRelat02.pas"/>
+    <File Path="UnRelat02.dfm"/>
+    <File Path="UnRelat03.pas"/>
+    <File Path="UnRelat03.dfm"/>
+    <File Path="UnRelat04.pas"/>
+    <File Path="UnRelat04.dfm"/>
+    <File Path="UnRelat03Parametros.pas"/>
+    <File Path="UnRelat03Parametros.dfm"/>
+    <File Path="UnRelat04Parametros.pas"/>
+    <File Path="UnRelat04Parametros.dfm"/>
+    <File Path="UnRelat02parametros.pas"/>
+    <File Path="UnRelat02parametros.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

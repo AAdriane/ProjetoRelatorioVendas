@@ -1,0 +1,26 @@
+object DmConexao: TDmConexao
+  OldCreateOrder = False
+  OnCreate = DataModuleCreate
+  Height = 377
+  Width = 510
+  object FDConnection: TFDConnection
+    Params.Strings = (
+      
+        'Database=D:\Horus 2021\Linguagem de Programa'#231#227'o II\Trabalho01_Ve' +
+        'ndas\BD\VENDAS.FDB'
+      'User_Name=sysdba'
+      'Password=masterkey'
+      'Protocol=TCPIP'
+      'Server=localhost'
+      'Port=3050'
+      'DriverID=FB')
+    LoginPrompt = False
+    Left = 184
+    Top = 112
+  end
+  object FDPhysFBDriverLink1: TFDPhysFBDriverLink
+    VendorLib = 'C:\Program Files\Firebird\Firebird_3_0\WOW64\fbclient.dll'
+    Left = 288
+    Top = 104
+  end
+end

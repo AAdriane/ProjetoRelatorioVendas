@@ -1,0 +1,124 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Relat'#243'rio de produtos por cliente'
+  ClientHeight = 366
+  ClientWidth = 703
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object RLReport1: TRLReport
+    Left = -48
+    Top = -24
+    Width = 794
+    Height = 1123
+    DataSource = DsVendaitem
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = []
+    object RLBand1: TRLBand
+      Left = 38
+      Top = 38
+      Width = 718
+      Height = 51
+      BandType = btColumnHeader
+    end
+    object rllabel: TRLLabel
+      Left = 232
+      Top = 48
+      Width = 341
+      Height = 24
+      Caption = 'Relat'#243'rio de produtos por cliente'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -21
+      Font.Name = 'Arial'
+      Font.Style = [fsBold, fsItalic]
+      ParentFont = False
+    end
+    object RLGroup1: TRLGroup
+      Left = 38
+      Top = 89
+      Width = 718
+      Height = 168
+      object RLBand2: TRLBand
+        Left = 0
+        Top = 0
+        Width = 718
+        Height = 48
+        object RLLabel1: TRLLabel
+          Left = 194
+          Top = 16
+          Width = 48
+          Height = 16
+          Caption = 'Cliente:'
+        end
+        object RLLabel3: TRLLabel
+          Left = 376
+          Top = 16
+          Width = 34
+          Height = 16
+          Caption = 'CPF:'
+        end
+        object RLLabel2: TRLLabel
+          Left = 24
+          Top = 16
+          Width = 48
+          Height = 16
+          Caption = 'Codigo:'
+        end
+        object RLDBText1: TRLDBText
+          Left = 96
+          Top = 16
+          Width = 76
+          Height = 16
+          DataField = 'ID_CLIENTE'
+          DataSource = DsVenda
+          Text = ''
+        end
+        object RLDBText2: TRLDBText
+          Left = 272
+          Top = 16
+          Width = 43
+          Height = 16
+          DataField = 'NOME'
+          DataSource = DsVenda
+          Text = ''
+        end
+      end
+    end
+  end
+  object QryVenda: TFDQuery
+    Connection = DmConexao.FDConnection
+    SQL.Strings = (
+      'select * from venda'
+      'join cliente on cliente.codcliente = venda.id_cliente')
+    Left = 24
+    Top = 8
+  end
+  object QryVendaItem: TFDQuery
+    Connection = DmConexao.FDConnection
+    SQL.Strings = (
+      'select * from vendaitem')
+    Left = 102
+    Top = 6
+  end
+  object DsVendaitem: TDataSource
+    DataSet = QryVendaItem
+    Left = 558
+    Top = 14
+  end
+  object DsVenda: TDataSource
+    DataSet = QryVenda
+    Left = 616
+    Top = 16
+  end
+end

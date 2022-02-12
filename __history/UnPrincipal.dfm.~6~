@@ -1,0 +1,205 @@
+object FormPrincipal: TFormPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'FormPrincipal'
+  ClientHeight = 607
+  ClientWidth = 739
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -16
+  Font.Name = 'Tahoma'
+  Font.Style = [fsBold]
+  OldCreateOrder = False
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 19
+  object Label1: TLabel
+    Left = 24
+    Top = 7
+    Width = 86
+    Height = 19
+    Caption = 'CLIENTES:'
+  end
+  object Label2: TLabel
+    Left = 24
+    Top = 175
+    Width = 177
+    Height = 19
+    Caption = 'VENDAS DO CLIENTE:'
+  end
+  object Label3: TLabel
+    Left = 24
+    Top = 335
+    Width = 189
+    Height = 19
+    Caption = 'PRODUTOS DA VENDA:'
+  end
+  object DBGrid1: TDBGrid
+    Left = 24
+    Top = 32
+    Width = 697
+    Height = 129
+    DataSource = dsCliente
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -16
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = [fsBold]
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'CODCLIENTE'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOME'
+        Width = 300
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CPF'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CODMUNICIPIO'
+        Visible = True
+      end>
+  end
+  object DBGrid2: TDBGrid
+    Left = 24
+    Top = 200
+    Width = 697
+    Height = 120
+    DataSource = dsVenda
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -16
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = [fsBold]
+  end
+  object DBGrid3: TDBGrid
+    Left = 24
+    Top = 360
+    Width = 697
+    Height = 120
+    DataSource = dsProduto
+    TabOrder = 2
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -16
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = [fsBold]
+  end
+  object GroupBox1: TGroupBox
+    Left = 0
+    Top = 486
+    Width = 739
+    Height = 121
+    Align = alBottom
+    Caption = 'Relat'#243'rios: '
+    TabOrder = 3
+    object Button1: TButton
+      Left = 24
+      Top = 24
+      Width = 300
+      Height = 33
+      Caption = '1. Clientes por munic'#237'pio'
+      TabOrder = 0
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Left = 24
+      Top = 63
+      Width = 300
+      Height = 33
+      Caption = '2. Produtos por cliente'
+      TabOrder = 1
+    end
+    object Button4: TButton
+      Left = 352
+      Top = 24
+      Width = 300
+      Height = 33
+      Caption = '3. Vendas por estado'
+      TabOrder = 2
+      OnClick = Button4Click
+    end
+    object Button3: TButton
+      Left = 352
+      Top = 63
+      Width = 300
+      Height = 33
+      Caption = '4. Vendas por cliente'
+      TabOrder = 3
+    end
+  end
+  object qryCliente: TFDQuery
+    IndexFieldNames = 'NOME:D'
+    Connection = DmConexao.FDConnection
+    SQL.Strings = (
+      'SELECT * FROM CLIENTE')
+    Left = 40
+    Top = 65528
+  end
+  object dsCliente: TDataSource
+    DataSet = qryCliente
+    Left = 104
+    Top = 65528
+  end
+  object qryVenda: TFDQuery
+    MasterSource = dsCliente
+    MasterFields = 'CODCLIENTE'
+    Connection = DmConexao.FDConnection
+    FetchOptions.AssignedValues = [evCache]
+    FetchOptions.Cache = [fiBlobs, fiMeta]
+    SQL.Strings = (
+      'SELECT * FROM VENDA'
+      'WHERE ID_CLIENTE = :CODCLIENTE')
+    Left = 232
+    Top = 65528
+    ParamData = <
+      item
+        Name = 'CODCLIENTE'
+        DataType = ftInteger
+        ParamType = ptInput
+        Value = Null
+      end>
+  end
+  object dsVenda: TDataSource
+    DataSet = qryVenda
+    Left = 272
+    Top = 65528
+  end
+  object qryProduto: TFDQuery
+    MasterSource = dsVenda
+    MasterFields = 'ID_VENDA'
+    Connection = DmConexao.FDConnection
+    FetchOptions.AssignedValues = [evCache]
+    FetchOptions.Cache = [fiBlobs, fiMeta]
+    SQL.Strings = (
+      'SELECT * FROM VENDAITEM'
+      'JOIN PRODUTO ON (PRODUTO.CODPRODUTO'
+      ' = VENDAITEM.ID_PRODUTO)'
+      'WHERE VENDAITEM.ID_VENDA = :CODVENDA')
+    Left = 400
+    Top = 65528
+    ParamData = <
+      item
+        Name = 'CODVENDA'
+        DataType = ftLargeint
+        ParamType = ptInput
+        Value = 1
+      end>
+  end
+  object dsProduto: TDataSource
+    DataSet = qryProduto
+    Left = 448
+    Top = 65528
+  end
+end
